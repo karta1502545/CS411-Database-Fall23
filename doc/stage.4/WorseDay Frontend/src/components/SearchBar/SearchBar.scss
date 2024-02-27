@@ -1,0 +1,57 @@
+// SearchBar.scss
+.search-container {
+  padding-top: 20px; // Adds some space on top
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c6c8ca; // Dark background color
+  border-radius: 22px; // Rounded corners
+  padding: 8px;
+  max-width: 500px; // Set a max-width for the search bar
+  width: 100%; // Make the search bar full width of its container
+  margin: auto; // Center the search bar in the parent container
+
+  .search-input {
+    flex-grow: 1;
+    background-color: transparent; // Transparent background
+    border: none;
+    color: #000309; // Text color
+    font-size: 16px; // Size of the text
+    padding: 10px 20px;
+    border-radius: 22px; // Rounded corners
+    margin-right: 8px; // Add some space between the input and the button
+
+    &::placeholder {
+      color: #0f2244; // Placeholder text color
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .search-button {
+    padding: 10px;
+    background-color: #4a4b4d; // Slightly different background for the button
+    border: none;
+    border-radius: 50%; // Circular button
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #68696b; // Hover effect for button
+    }
+
+    svg {
+      color: #e4e6eb;
+      font-size: 16px;
+    }
+  }
+}

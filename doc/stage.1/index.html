@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WorseDay: Share the Bad to Feel Good</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        main {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 1em;
+            width: 20%;
+        }
+        .content {
+            flex: 3;
+            padding: 2em;
+        }
+        .blank {
+            flex: 1;
+            width: 20%;
+        }
+        .story-section {
+            border: 1px solid #ccc;
+            padding: 1em;
+            margin: 1em 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Calendar styles */
+        .calendar {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .calendar th, .calendar td {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>WorseDay</h1>
+        <p>Share the Bad to Feel Good</p>
+    </header>
+
+    <main>
+        <div class="sidebar">
+            <h2>Personal Profile</h2>
+            <p>Username: Andy Lee</p>
+            <p>Today EMO</p>
+            <p>EMO Calendar:</p>
+            <table class="calendar">
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                <!-- Add calendar days here -->
+            </table>
+        </div>
+
+        <div class="content">
+            <div class="story-section">
+                <h2>Customized Recommend</h2>
+                <!-- Stories recommended based on user behavior -->
+                <h3>Story Title 1</h3>
+                <p>Story content here...</p>
+                <p><strong>Mood Tags:</strong> Frustrated, Sad</p>
+            </div>
+
+            <div class="story-section">
+                <h2>Worst Today</h2>
+                <!-- Stories that are particularly bad today -->
+                <h3>Story Title 2</h3>
+                <p>Story content here...</p>
+                <p><strong>Mood Tags:</strong> Angry, Overwhelmed</p>
+            </div>
+
+            <div class="story-section">
+                <h2>Worse Near Me</h2>
+                <!-- Stories from users near your location -->
+                <h3>Story Title 3</h3>
+                <p>Story content here...</p>
+                <p><strong>Mood Tags:</strong> Angry, Sad</p>
+            </div>
+        </div>
+
+        <div class="blank">
+            <!-- Leave this area blank -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 WorseDay. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+User(userID: int [PK],
+     username: varchar(255),
+     password: varchar(100),
+     email: varchar(255))
+
+# post
+Feeling(feelingID: int [PK],
+        content: text,
+        userID: int [FK to User.userID],
+        feelingDate: DATETIME)
+
+# like
+Resonates(userID: int [PK] [FK to User.userID],
+          feelingID: int [PK] [FK to Feeling.feelingID],
+          type: int)
+
+# tag
+Emotion(emotionID: int [PK],
+        content: text)
+
+FeelingIncludeEmotion(
+  feelingID: int [PK] [FK to Feeling.feelingID],
+  emotionID: int [PK] [FK to Emotion.emotionID])
+
+Location(LocationID: int [PK],
+         nation: varchar(255),
+         province: varchar(255),
+         city: varchar(255))
+
+FeelingHasLocation(
+  feelingID: int [PK] [FK to Feeling.feelingID],
+  locationID: int [PK] [FK to Location.LocationID])
+
+EMOMeter(EMOID: int [PK],
+         userID: int [FK to User.userID],
+         EMOValue: int,
+         EMODate: DATETIME)
+
+Comments(commentID: INT [PK],
+    	 userID: INT [PK] [FK to User.userID],
+    	 feelingID: INT [PK] [FK to Feeling.feelingID],
+    	 content: TEXT,
+    	 commentDate: DATETIME)
